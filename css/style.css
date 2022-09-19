@@ -738,6 +738,9 @@ h4.timeline-title a:hover {
 .timeline-badge.danger {
   background-color: #bb1e10 !important;
 }
+.timeline-badge.indigo {
+	background-color: #490596 !important;
+  }
 .timeline-badge.pass {
   background-color: #fdbd10 !important;
 }
@@ -2094,17 +2097,20 @@ body { font-family: sans-serif; }
 
 .python {width: 90%; background-color: #04AA6D;}
 .oracle {width: 70%; background-color: #04AA6D;}
+.mysql {width: 85%; background-color: #04AA6D;}
 .clang {width: 65%; background-color: #04AA6D;}
 .cpplang {width: 65%; background-color: #04AA6D;}
 .html5 {width: 70%; background-color: #04AA6D;}
-.css3 {width: 60%; background-color: #04AA6D;}
-.phplang {width: 55%; background-color: #04AA6D;}
-.java {width: 55%; background-color: #04AA6D;}
+.css3 {width: 65%; background-color: #04AA6D;}
+.phplang {width: 80%; background-color: #04AA6D;}
+.java {width: 80%; background-color: #04AA6D;}
 .vb {width: 55%; background-color: #04AA6D;}
 .js {width: 50%; background-color: #04AA6D;}
 .flask {width: 75%; background-color: #04AA6D;}
+.firebase {width: 75%; background-color: #04AA6D;}
 .android {width: 35%; background-color: #04AA6D;}
 .github {width: 50%; background-color: #04AA6D;}
+.androidStudio {width: 65%; background-color: #04AA6D;}
 
 
 /*Page Loader*/
