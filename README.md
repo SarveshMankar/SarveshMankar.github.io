@@ -1,1 +1,1 @@
-# <a href="https://sam-tech-2543.github.io/" target="_blank">Sam-Tech-2543.github.io/</a>
+# <a href="https://sam-tech-2543.github.io/" target="_blank">sam-Tech-2543.github.io/</a>
