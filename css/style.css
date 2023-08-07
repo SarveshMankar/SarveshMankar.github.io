@@ -620,7 +620,7 @@ span.border.one:after {
 }
 /*-- clients --*/
 
-#work {
+#education {
     padding: 5em 0;
 }
 .timeline {
@@ -785,7 +785,7 @@ ul.year li:nth-child(5){
 .time-main {
     margin-top: 3em;
 }
-/*--//work--*/
+/*--//education--*/
 /*-- portfolio --*/
 .portfolio-head h2{
 	color: #202020;
@@ -1258,7 +1258,7 @@ span.border.two:after {
 		margin-right: 5em;
 		min-height: 433px;
 	}
-	#work,.blog{
+	#education,.blog{
 		padding:4em 0;
 	}
 	.footer {
@@ -1310,7 +1310,7 @@ span.border.two:after {
 		float: right;
 		padding: 0.7em 2em 2em 2em;
 	}
-	#work,.blog,#services {
+	#education,.blog,#services {
 		padding: 3em 0;
 	}
 	#port {
@@ -1660,7 +1660,7 @@ span.border.two:after {
 	h4.timeline-title {
       font-size: 1em;
 	}
-	#work, .blog, #services {
+	#education, .blog, #services {
 		padding: 2em 0;
 	}
 	.service-head h3 {
@@ -1969,7 +1969,7 @@ span.border.two:after {
 		width:80%;
 		margin-top: 8px;
 	}
-	#work, .blog, #services {
+	#education, .blog, #services {
     padding: 1.2em 0;
 	}
 	span.border, span.border.one {
