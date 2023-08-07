@@ -2333,8 +2333,7 @@ and (max-device-width : 1700px) {
 	}
 }
 @media only screen
-and (min-device-width : 412px)
-and (max-device-width : 1499px) {
+and (max-device-width : 767px) {
 	.skills-bar svg{
 		height: 30%;
 		width: 30%;
