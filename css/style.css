@@ -2324,7 +2324,6 @@ body { font-family: sans-serif; }
 }
 
 @media only screen
-and (min-device-width : 1500px)
 and (max-device-width : 1700px) {
 	.skills-bar svg{
 		height: 10%;
@@ -2332,6 +2331,7 @@ and (max-device-width : 1700px) {
 		padding: 1%;
 	}
 }
+
 @media only screen
 and (max-device-width : 767px) {
 	.skills-bar svg{
