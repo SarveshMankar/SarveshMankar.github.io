@@ -2320,10 +2320,25 @@ body { font-family: sans-serif; }
 }
 
 .skills-bar{
-	
+
 }
 
-@media only screen
+.skills-bar svg{
+	height: 90px;
+	width: 90px;
+
+	margin: 10px;
+
+	border-radius: 4px;
+	transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+  	cursor: pointer;
+}
+
+.skills-bar svg:hover{
+	transform: scale(1.05);
+}
+
+/* @media only screen
 and (max-device-width : 1700px) {
 	.skills-bar svg{
 		height: 10%;
@@ -2339,4 +2354,4 @@ and (max-device-width : 767px) {
 		width: 30%;
 		padding: 1%;
 	}
-}
+} */
