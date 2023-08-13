@@ -20,7 +20,7 @@
   
   <link rel="stylesheet" type="text/css" href="assets/vendor/owl-carousel/owl.carousel.css">
   
-  <link rel="stylesheet" type="text/css" href="assets/vendor/perfect-scrollbar/css/perfect-scrollbar.css">
+  <!-- <link rel="stylesheet" type="text/css" href="assets/vendor/perfect-scrollbar/css/perfect-scrollbar.css"> -->
   
   <link rel="stylesheet" type="text/css" href="assets/vendor/nice-select/css/nice-select.css">
   
@@ -31,6 +31,10 @@
   <link rel="stylesheet" type="text/css" href="assets/css/topbar.virtual.css">
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script>
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css'>
+
 </head>
 <body class="theme-red">
   
@@ -382,17 +386,18 @@
               <main class="main-content">
                 <h1><a href="https://github.com/Git-Signs" target="_blank">VimGuardian Plugin</a></h1>
                 <p align="justify">Developing near IDE features on old rusty editors like VI, helping the developer community.
-                  Ropes is the primary data structure utilized in this project, and it is developed using C, ensuring quick data operations. Utilized a Python RPC event listener to handle events.
+                  Ropes is the primary data structure utilized in this project, and it is developed using C, ensuring quick data operations.
+                   Utilized a Python RPC event listener to handle events.
                   Gained knowledge about how Git and other version controls operate. Discovered the different
                   functionalities that contemporary IDEs offer.</p>
-                  <div class="flex-row icon-container">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original-wordmark.svg" />
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" />
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" />
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vim/vim-original.svg" />
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-plain.svg" />
-                  </div>
               </main>
+              <div class="flex-row icon-container">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original-wordmark.svg" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vim/vim-original.svg" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-plain.svg" />
+              </div>
             </div>
           </div>
         </div>
@@ -747,7 +752,7 @@
     
   <script src="assets/vendor/owl-carousel/owl.carousel.min.js"></script>
     
-  <script src="assets/vendor/perfect-scrollbar/js/perfect-scrollbar.js"></script>
+  <!-- <script src="assets/vendor/perfect-scrollbar/js/perfect-scrollbar.js"></script> -->
     
   <script src="assets/vendor/isotope/isotope.pkgd.min.js"></script>
     
@@ -761,11 +766,62 @@
 
   <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
 
-  <script src="assets/js/google-maps.js"></script>
+  <!-- <script src="assets/js/google-maps.js"></script> -->
     
   <script src="assets/js/topbar-virtual.js"></script>
 
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIA_zqjFMsJM_sxP9-6Pde5vVCTyJmUHM&callback=initMap"></script>
+  <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIA_zqjFMsJM_sxP9-6Pde5vVCTyJmUHM&callback=initMap"></script> -->
   
+  <!-- Saving Reviews to FireBase -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.1/firebase-app.js";
+    import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/9.0.1/firebase-database.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyBKk_qBWnMk73frWGKFyXoAby8NHja5jQo",
+      authDomain: "portfolio-5c58d.firebaseapp.com",
+      databaseURL: "https://portfolio-5c58d-default-rtdb.firebaseio.com",
+      projectId: "portfolio-5c58d",
+      storageBucket: "portfolio-5c58d.appspot.com",
+      messagingSenderId: "771731300589",
+      appId: "1:771731300589:web:b1ba6e7adfb6ac24946ce4",
+      measurementId: "G-PBEC51BLS6"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    
+    // Get the data and save if from the Contact Form
+    document.querySelector(".vg-contact-form").addEventListener("submit", submitForm);
+    function submitForm(e) {
+      e.preventDefault();
+
+      // Get input values
+      let name = document.querySelector(".vg-contact-form input[name='Name']").value;
+      let email = document.querySelector(".vg-contact-form input[name='Email']").value;
+      let subject = document.querySelector(".vg-contact-form input[name='Subject']").value;
+      let msg = document.querySelector(".vg-contact-form textarea[name='Message']").value;
+      saveContactInfo(name, email, subject, msg);
+
+      Swal.fire(
+        'Thank You!',
+        'If you Like the Portfolio, do give a Star on GitHub!',
+        'success'
+      )
+
+      document.querySelector(".vg-contact-form").reset();
+    }
+
+    // Save infos to Firebase
+    function saveContactInfo(name, email, subject, msg) {
+      const db = getDatabase();
+      set(ref(db, 'users/' + name), {
+        name: name,
+        email: email,
+        subject: subject,
+        msg: msg
+      });
+    }
+
+</script>  
 </body>
 </html>
